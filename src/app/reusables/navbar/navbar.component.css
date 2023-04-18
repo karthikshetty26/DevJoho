@@ -1,0 +1,31 @@
+.nav_div {
+    width: 100%;
+    padding: 15px 15px;
+}
+
+.nav_container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo {
+    width: 150px;
+}
+
+.nav_logo img {
+    width: 100%;
+}
+
+.nav_link_container ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav_link_container ul li {
+    margin-left: 15px;
+}
