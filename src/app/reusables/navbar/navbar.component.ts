@@ -11,7 +11,11 @@ export class NavbarComponent {
 
   showCategoryPc() {
     console.log("Clicked")
-    $('#showCategoryPc').removeClass('display-none');
+    if($('#showCategoryPc').hasClass('display_none')){
+      $('#showCategoryPc').removeClass('display_none');
+    } else {
+      $('#showCategoryPc').addClass('display_none');
+    }
   }
 
 }
