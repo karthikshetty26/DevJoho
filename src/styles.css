@@ -16,4 +16,17 @@
     --font-primary: 'Heebo', sans-serif;
     --font-secondary: 'Expletus Sans', cursive, sans-serif;
     --font-tertiary: 'Palanquin', sans-serif;
+
+    --color-one: #2A2F4F;
+    --color-two: #917FB3;
+    --color-three: #E5BEEC;
+    --color-four: #FDE2F3;
+
+    --font-color-dark: #1a1b22;
+    --font-color-mid-dark: #292a35;
+
+    --font-color-light: #e6d4df;
+    --font-color-mid-light: #e9cde2;
+
+    --background-color: #f7f7f7;
 }
