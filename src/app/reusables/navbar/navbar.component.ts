@@ -8,13 +8,20 @@ import * as $ from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  prevent: boolean = false;
+
+  hideShowCategoryPc() {
+    this.prevent = true;
+  }
 
   showCategoryPc() {
-    console.log("Clicked")
-    if($('#showCategoryPc').hasClass('display_none')){
+    if ($('#showCategoryPc').hasClass('display_none') && !this.prevent) {
       $('#showCategoryPc').removeClass('display_none');
+      $('#category-link').addClass('category_link');
     } else {
       $('#showCategoryPc').addClass('display_none');
+      $('#category-link').removeClass('category_link');
+      this.prevent = false;
     }
   }
 

@@ -5,9 +5,9 @@
     </div>
 
     <div class="nav_link_container">
-      <ul>
+      <ul (click)="showCategoryPc()">
         <li><a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
-        <li (click)="showCategoryPc()" class="category_link">Category</li>
+        <li class="" id="category-link">Category</li>
         <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a></li>
         <li>Contact</li>
       </ul>
@@ -15,9 +15,9 @@
   </div>
   <nav>
 
-    <div class="show_category_pc display_none " id="showCategoryPc">
+    <div class="show_category_pc display_none " id="showCategoryPc" (click)="showCategoryPc()">
       <div>
-        <ul class="show_category_pc_nav_ul">
+        <ul class="show_category_pc_nav_ul" (click)="hideShowCategoryPc(); showCategoryPc()">
           <li>One</li>
           <li>One</li>
           <li>One</li>
