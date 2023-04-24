@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//Directives
+import { ClickOutsideDirective } from './reusables/navbar/click-outside.directive';
+
 // Reusables
 import { NavbarComponent } from './reusables/navbar/navbar.component'
 import { FooterComponent } from './reusables/footer/footer.component'
@@ -16,6 +19,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
+
+    ClickOutsideDirective,
+    
     NavbarComponent,
     FooterComponent,
 

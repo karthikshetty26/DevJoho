@@ -13,11 +13,15 @@
 }
 
 :root {
+    --max-width: 1400px;
+    
     --font-primary: 'Heebo', sans-serif;
     --font-secondary: 'Expletus Sans', cursive, sans-serif;
     --font-tertiary: 'Palanquin', sans-serif;
 
-    --color-one: #2A2F4F;
+    --call-to-action: rgb(59, 191, 248);
+
+    --color-one: #2a2f4f;
     --color-two: #917FB3;
     --color-three: #E5BEEC;
     --color-four: #FDE2F3;
@@ -29,6 +33,4 @@
     --font-color-mid-light: #e9cde2;
 
     --background-color: #f7f7f7;
-
-    --call-to-action: rgb(59, 191, 248);
 }

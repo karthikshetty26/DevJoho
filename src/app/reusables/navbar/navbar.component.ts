@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Renderer2 } from '@angular/core';
 // declare var $:any;
 import * as $ from 'jquery';
 
@@ -7,22 +7,27 @@ import * as $ from 'jquery';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent {
-  prevent: boolean = false;
+  showCategory: boolean = false;
 
-  hideShowCategoryPc() {
-    this.prevent = true;
+  categoryList: any[] = [
+    {name:'Fonts'},
+    {name:'Stock Photos'},
+    {name:'Stock Videos'},
+    {name:'SVG Images'},
+    {name:'Icons'},
+    {name:'Illustrations'},
+    {name:'Patterns'}
+  ]
+
+  showHideCategoryPc() {
+    console.log("Clicked", this.categoryList)
+    this.showCategory = !this.showCategory;
   }
 
-  showCategoryPc() {
-    if ($('#showCategoryPc').hasClass('display_none') && !this.prevent) {
-      $('#showCategoryPc').removeClass('display_none');
-      $('#category-link').addClass('category_link');
-    } else {
-      $('#showCategoryPc').addClass('display_none');
-      $('#category-link').removeClass('category_link');
-      this.prevent = false;
-    }
+  HideCategoryPc() {
+    console.log("Clicked Ouside")
+    this.showCategory = false;
   }
-
 }
