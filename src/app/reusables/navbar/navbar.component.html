@@ -1,5 +1,6 @@
 <nav class="nav_div" appClickOutside (clickOutside)="HideCategoryPc()">
   <div class='nav_container'>
+
     <div class="nav_logo">
       <svg width="100%" viewBox="0 0 316 69" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="devjoho.com"
@@ -16,7 +17,12 @@
           </a>
         </li>
         <li [ngClass]="showCategory ? 'category_link' : ''" id="category-link" (click)="showHideCategoryPc()">
-          Category
+          <span>Category&nbsp;<span><i class="fa-solid fa-angle-down"></i></span></span>
+          <div class="showCategoryPc" [ngClass]="showCategory ? 'active' : ''">
+            <ul class="show_category_pc_nav_ul" [ngClass]="showCategory ? 'active' : ''">
+              <li *ngFor="let data of categoryList"><i class="fa-solid fa-caret-right"></i>&nbsp;&nbsp;{{data.name}}</li>
+            </ul>
+          </div>
         </li>
         <li (click)="HideCategoryPc()">
           <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">
@@ -35,12 +41,6 @@
 
   </div>
 
-  <div class="showCategoryPc" [ngClass]="showCategory ? 'active' : ''">
-    <ul class="show_category_pc_nav_ul" [ngClass]="showCategory ? 'active' : ''">
-      <li *ngFor="let data of categoryList">{{data.name}}</li>
-    </ul>
-  </div>
-
 </nav>
 
-<div class="overlay" *ngIf="showCategory"></div>
+<!-- <div class="overlay" *ngIf="showCategory"></div> -->
