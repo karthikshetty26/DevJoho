@@ -9,7 +9,7 @@
       </svg>
     </div>
 
-    <div class="nav_link_container">
+    <div class="nav_link_container" id="nav_link_container">
       <ul>
         <li (click)="HideCategoryPc()">
           <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">
@@ -18,9 +18,11 @@
         </li>
         <li [ngClass]="showCategory ? 'category_link' : ''" id="category-link" (click)="showHideCategoryPc()">
           <span>Category&nbsp;<span><i class="fa-solid fa-angle-down"></i></span></span>
-          <div class="showCategoryPc" [ngClass]="showCategory ? 'active' : ''">
+          <div class="showCategoryPc" [ngClass]="showCategory ? 'active' : ''" id="showCategoryPc">
             <ul class="show_category_pc_nav_ul" [ngClass]="showCategory ? 'active' : ''">
-              <li *ngFor="let data of categoryList"><i class="fa-solid fa-caret-right"></i>&nbsp;&nbsp;{{data.name}}</li>
+              <li *ngFor="let data of categoryList">
+                <i class="fa-solid fa-caret-right"></i>&nbsp;&nbsp;{{data.name}}
+              </li>
             </ul>
           </div>
         </li>
@@ -35,8 +37,8 @@
       </ul>
     </div>
 
-    <div class="nav_link_btn">
-      <i class="fa-solid fa-bars"></i>
+    <div class="nav_link_btn" (click)="navButtonClick()">
+      <i class="fa-solid fa-bars" id="nav_link_container_i"></i>
     </div>
 
   </div>
