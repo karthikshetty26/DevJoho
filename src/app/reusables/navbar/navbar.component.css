@@ -1,7 +1,6 @@
 .nav_div {
-    --nav-height: 80px;
     --li-margin-mob: 10px;
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 500;
 

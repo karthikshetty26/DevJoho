@@ -14,6 +14,8 @@
 
 :root {
     --max-width: 1400px;
+
+    --nav-height: 80px;
     
     --font-primary: 'Heebo', sans-serif;
     --font-secondary: 'Expletus Sans', cursive, sans-serif;
