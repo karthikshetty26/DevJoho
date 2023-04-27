@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  categoryList: any[] = [
+    { name: 'Fonts' },
+    { name: 'Stock Photos' },
+    { name: 'Stock Videos' },
+    { name: 'SVG Images' },
+    { name: 'Icons' },
+    { name: 'Illustrations' },
+    { name: 'Patterns' }
+  ]
+
+  listAlter() {
+    
+  }
 }

@@ -1,11 +1,30 @@
 <main>
-    <section>
+    <section class="hero_section_one">
         <div class="hero_main_container">
-            <div class="here_main_content">
+            <div class="hero_main_content">
                 <h3>Welcome to <span>devjoho.com</span></h3>
-                <h1>Your one-stop for developer resources</h1>
-                <h2>Streamline your development process with ease</h2>
+                <h1>Your One-stop for <span>Developer</span>&nbsp;Resources</h1>
+                <h2>Streamline your development process with ease.</h2>
                 <button>Start Exploring</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero_section_two">
+        <div class="hero_main_container_two">
+            <div class="hero_main_content">
+                <div class="sub_headding">
+                    <h4>BROWSE BY CATEGORY</h4>
+                    <div class="collapse_btn"
+                    (click)="listAlter()"><i class="fa-solid fa-compress"></i></div>
+                </div>
+                <div class="category_hero_content_container">
+                    <ul>
+                        <li *ngFor="let data of categoryList">
+                            {{data.name}}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
